@@ -1,0 +1,1 @@
+C:\Users\Prafull\Desktop\OMNIPULSE AI\backend\venv\Scripts\python.exe: can't open file 'c:\\Users\\Prafull\\Desktop\\OMNIPULSE': [Errno 2] No such file or directory

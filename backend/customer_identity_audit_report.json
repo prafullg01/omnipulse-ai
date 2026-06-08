@@ -1,0 +1,196 @@
+{
+  "audit_timestamp": "2026-06-04T17:55:29.633510",
+  "sources": {
+    "customers": {
+      "count": 5697,
+      "id_format": "CUST-001803",
+      "sample_ids": [
+        "CUST-001803",
+        "CUST-007964",
+        "CUST-006890",
+        "CUST-004949",
+        "CUST-004896"
+      ]
+    },
+    "orders": {
+      "count": 2057,
+      "id_format": "ADMIN-001",
+      "sample_ids": [
+        "ADMIN-001",
+        "CUST-001000",
+        "CUST-001008",
+        "CUST-001014",
+        "CUST-001028"
+      ]
+    },
+    "events": {
+      "count": 5498,
+      "id_format": "ADMIN-001",
+      "sample_ids": [
+        "ADMIN-001",
+        "CUST-001000",
+        "CUST-001004",
+        "CUST-001005",
+        "CUST-001007"
+      ]
+    },
+    "customer_profiles": {
+      "count": 5697,
+      "id_format": "CUST-001000",
+      "sample_ids": [
+        "CUST-001000",
+        "CUST-001004",
+        "CUST-001005",
+        "CUST-001007",
+        "CUST-001008"
+      ]
+    },
+    "nba_decisions": {
+      "count": 5697,
+      "id_format": "CUST-001000",
+      "sample_ids": [
+        "CUST-001000",
+        "CUST-001004",
+        "CUST-001005",
+        "CUST-001007",
+        "CUST-001008"
+      ]
+    },
+    "campaign_responses": {
+      "count": 656,
+      "id_format": "CUST-001007",
+      "sample_ids": [
+        "CUST-001007",
+        "CUST-001038",
+        "CUST-001040",
+        "CUST-001086",
+        "CUST-001108"
+      ]
+    }
+  },
+  "patterns": {
+    "customers": "Unknown (CUST-001803)",
+    "orders": "Unknown (ADMIN-001)",
+    "events": "Unknown (ADMIN-001)",
+    "customer_profiles": "Unknown (CUST-001000)",
+    "nba_decisions": "Unknown (CUST-001000)",
+    "campaign_responses": "Unknown (CUST-001007)"
+  },
+  "validations": {
+    "customers_orders": 2056,
+    "customers_events": 5497,
+    "orders_events": 2057,
+    "campaign_events_orders": 0,
+    "campaign_responses_orders": 229
+  },
+  "total_unique_customers": 13908,
+  "overlap_sample": [
+    {
+      "customer_id": "CUST-001803",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-007964",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-006890",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-004949",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-004896",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-008726",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-001773",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-007275",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-002813",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    },
+    {
+      "customer_id": "CUST-001847",
+      "tables": [
+        "customers",
+        "orders",
+        "events",
+        "profiles"
+      ],
+      "table_count": 4
+    }
+  ],
+  "strategy": "HYBRID_ATTRIBUTION",
+  "critical_issues": [],
+  "recommendations": [
+    "Use direct attribution for matched customers",
+    "Use behavioral attribution for unmatched customers",
+    "Report both direct and estimated revenue separately"
+  ]
+}

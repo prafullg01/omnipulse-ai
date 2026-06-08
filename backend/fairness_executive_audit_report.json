@@ -1,0 +1,113 @@
+{
+  "audit_timestamp": "2026-06-04T18:49:40.671657",
+  "fairness_observatory": {
+    "gender_distribution": {
+      "female": 2109,
+      "male": 1978,
+      "other": 1670
+    },
+    "age_distribution": {
+      "18-24": 116,
+      "25-34": 1456,
+      "35-44": 1444,
+      "45-54": 1433,
+      "55+": 1308
+    },
+    "action_distribution": {
+      "churn_rescue": 693,
+      "cross_sell": 3689,
+      "loyalty_reward": 105,
+      "premium_upgrade": 127,
+      "re_engagement": 1143
+    },
+    "channel_distribution": {
+      "Call": 251,
+      "Email": 1497,
+      "Push": 1280,
+      "SMS": 1288,
+      "WhatsApp": 1381,
+      "email": 40,
+      "push": 20
+    },
+    "overall_fairness": 87.85,
+    "equity_index": 0.8785,
+    "fairness_scores": {
+      "gender": 99.5,
+      "age": 94.9,
+      "action": 66.8,
+      "channel": 90.2
+    }
+  },
+  "executive_intelligence": {
+    "total_customers": 5697,
+    "total_revenue": 4198780.71,
+    "active_campaigns": 5,
+    "high_risk_customers": 1121,
+    "revenue_at_risk": 0,
+    "revenue_at_risk_method": "Historical orders",
+    "revenue_exposure": 0,
+    "avg_churn_risk": 44.375407250174256,
+    "avg_trust_score": 86.78185185268259,
+    "recommendation_text": "Immediate intervention required for 1,121 high-risk customers representing \u20b90.00 in potential revenue loss."
+  },
+  "validation_queries": [
+    {
+      "kpi": "Total Customers",
+      "query": "SELECT COUNT(*) FROM customers WHERE role = 'customer'",
+      "result": 5697,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "Total Revenue",
+      "query": "SELECT SUM(total_amount) FROM orders WHERE status != 'cancelled'",
+      "result": 4198780.71,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "Active Campaigns",
+      "query": "SELECT COUNT(*) FROM campaigns WHERE status = 'active'",
+      "result": 5,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "High Risk Customers",
+      "query": "SELECT COUNT(*) FROM customer_profiles WHERE churn_probability >= 0.7",
+      "result": 1121,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "Revenue At Risk",
+      "query": "\n        SELECT SUM(o.total_amount)\n        FROM orders o\n        JOIN customer_profiles cp ON o.customer_id = cp.customer_id\n        WHERE cp.churn_probability >= 0.7\n        AND o.status != 'cancelled'\n    ",
+      "result": 0,
+      "method": "Historical orders",
+      "confidence": "MEDIUM"
+    },
+    {
+      "kpi": "Revenue Exposure",
+      "query": "Same as Revenue At Risk",
+      "result": 0,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "Average Churn Risk",
+      "query": "SELECT AVG(churn_probability) FROM customer_profiles",
+      "result": 44.375407250174256,
+      "confidence": "HIGH"
+    },
+    {
+      "kpi": "Average Trust Score",
+      "query": "SELECT AVG(trust_score) FROM customer_profiles",
+      "result": 86.78185185268259,
+      "confidence": "HIGH"
+    }
+  ],
+  "issues": [
+    {
+      "module": "Fairness Observatory",
+      "severity": "CRITICAL",
+      "issue": "fairness_metrics table missing",
+      "impact": "All fairness metrics are hardcoded or calculated on-the-fly"
+    }
+  ],
+  "recommendations": []
+}

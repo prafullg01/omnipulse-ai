@@ -1,0 +1,149 @@
+{
+  "generated_at": "2026-06-04T00:18:45.051222",
+  "counts": {
+    "Customer Count": 5697,
+    "Customer Profile Count": 5697,
+    "Journey Count": 380,
+    "NBA Decision Count": 5697,
+    "Campaign Count": 5,
+    "Campaign Response Count": 682,
+    "Order Count": 2536,
+    "Order Item Count": 2536,
+    "Event Count": 28815,
+    "Product Count": 3899,
+    "Support Ticket Count": 1,
+    "Message Count": 0
+  },
+  "distributions": {
+    "churn": [
+      {
+        "risk_level": "Low Risk",
+        "count": 2392,
+        "percentage": 42.0
+      },
+      {
+        "risk_level": "Medium Risk",
+        "count": 1424,
+        "percentage": 25.0
+      },
+      {
+        "risk_level": "High Risk",
+        "count": 1025,
+        "percentage": 18.0
+      },
+      {
+        "risk_level": "Critical Risk",
+        "count": 856,
+        "percentage": 15.0
+      }
+    ],
+    "emotion": [
+      {
+        "emotion": "neutral",
+        "count": 4172,
+        "percentage": 73.2
+      },
+      {
+        "emotion": "happy",
+        "count": 1037,
+        "percentage": 18.2
+      },
+      {
+        "emotion": "frustrated",
+        "count": 455,
+        "percentage": 8.0
+      },
+      {
+        "emotion": "excited",
+        "count": 33,
+        "percentage": 0.6
+      }
+    ],
+    "trust": [
+      {
+        "trust_level": "Low Trust",
+        "count": 110,
+        "percentage": 1.9
+      },
+      {
+        "trust_level": "Medium Trust",
+        "count": 1170,
+        "percentage": 20.5
+      },
+      {
+        "trust_level": "High Trust",
+        "count": 4417,
+        "percentage": 77.5
+      }
+    ],
+    "persona": [
+      {
+        "persona": "Inactive",
+        "count": 4196,
+        "percentage": 73.7
+      },
+      {
+        "persona": "At-Risk",
+        "count": 1121,
+        "percentage": 19.7
+      },
+      {
+        "persona": "Loyal",
+        "count": 336,
+        "percentage": 5.9
+      },
+      {
+        "persona": "VIP",
+        "count": 44,
+        "percentage": 0.8
+      }
+    ],
+    "segment": [
+      {
+        "segment": "Inactive",
+        "count": 4196,
+        "percentage": 73.7
+      },
+      {
+        "segment": "At-Risk",
+        "count": 1121,
+        "percentage": 19.7
+      },
+      {
+        "segment": "Loyal",
+        "count": 336,
+        "percentage": 5.9
+      },
+      {
+        "segment": "VIP",
+        "count": 44,
+        "percentage": 0.8
+      }
+    ],
+    "journey": [
+      {
+        "journey_stage": "inactive",
+        "count": 4196,
+        "percentage": 73.7
+      },
+      {
+        "journey_stage": "at_risk",
+        "count": 1121,
+        "percentage": 19.7
+      },
+      {
+        "journey_stage": "loyal",
+        "count": 380,
+        "percentage": 6.7
+      }
+    ]
+  },
+  "system_health": {
+    "total_customers": 5697,
+    "profile_coverage": 100.0,
+    "nba_coverage": 100.0,
+    "campaign_count": 5,
+    "journey_count": 380,
+    "overall_status": "OPERATIONAL"
+  }
+}

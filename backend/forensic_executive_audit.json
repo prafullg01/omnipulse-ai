@@ -1,0 +1,14 @@
+{
+  "total_customers": 5697,
+  "platform_revenue": 4198780.71,
+  "high_risk_shown": 1121,
+  "high_risk_db_07": 1121,
+  "revenue_at_risk_shown": 0,
+  "revenue_at_risk_correct": 1856006.7728351734,
+  "clv_nonzero_customers": 2056,
+  "avg_happiness_db": 57.64525188695805,
+  "active_campaigns": 5,
+  "potential_revenue_loss": 0,
+  "root_cause": "customer_profiles.clv is 0 for all customers. Revenue At Risk formula uses SUM(clv) which always returns 0.",
+  "fix": "Replace SUM(clv) with order-history sum + potential estimation"
+}

@@ -1,0 +1,242 @@
+{
+  "customers": {
+    "row_count": 5698,
+    "columns": [
+      "customer_id",
+      "first_name",
+      "last_name",
+      "email",
+      "password_hash",
+      "phone",
+      "gender",
+      "age",
+      "city",
+      "country",
+      "registration_date",
+      "preferred_language",
+      "status",
+      "role",
+      "avatar_url",
+      "created_at",
+      "updated_at"
+    ],
+    "column_count": 17,
+    "foreign_keys": []
+  },
+  "orders": {
+    "row_count": 2536,
+    "columns": [
+      "order_id",
+      "customer_id",
+      "total_amount",
+      "status",
+      "payment_method",
+      "shipping_address",
+      "order_date",
+      "delivered_at"
+    ],
+    "column_count": 8,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "order_items": {
+    "row_count": 2536,
+    "columns": [
+      "order_item_id",
+      "order_id",
+      "product_id",
+      "quantity",
+      "price"
+    ],
+    "column_count": 5,
+    "foreign_keys": [
+      "['order_id'] -> orders.['order_id']",
+      "['product_id'] -> products.['product_id']"
+    ]
+  },
+  "products": {
+    "row_count": 3899,
+    "columns": [
+      "product_id",
+      "name",
+      "category",
+      "description",
+      "price",
+      "original_price",
+      "stock",
+      "rating",
+      "review_count",
+      "image_url",
+      "brand",
+      "tags",
+      "created_at"
+    ],
+    "column_count": 13,
+    "foreign_keys": []
+  },
+  "events": {
+    "row_count": 28815,
+    "columns": [
+      "event_id",
+      "customer_id",
+      "event_type",
+      "event_value",
+      "metadata_json",
+      "timestamp"
+    ],
+    "column_count": 6,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "campaigns": {
+    "row_count": 0,
+    "columns": [
+      "campaign_id",
+      "campaign_name",
+      "description",
+      "audience",
+      "channel",
+      "offer",
+      "discount_pct",
+      "status",
+      "variant",
+      "budget",
+      "created_at",
+      "started_at",
+      "ended_at"
+    ],
+    "column_count": 13,
+    "foreign_keys": []
+  },
+  "campaign_responses": {
+    "row_count": 0,
+    "columns": [
+      "response_id",
+      "campaign_id",
+      "customer_id",
+      "opened",
+      "clicked",
+      "converted",
+      "revenue",
+      "timestamp"
+    ],
+    "column_count": 8,
+    "foreign_keys": [
+      "['campaign_id'] -> campaigns.['campaign_id']",
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "customer_profiles": {
+    "row_count": 5697,
+    "columns": [
+      "customer_id",
+      "risk_score",
+      "trust_score",
+      "happiness_score",
+      "clv",
+      "predicted_clv",
+      "churn_probability",
+      "persona",
+      "emotion",
+      "segment",
+      "engagement_score",
+      "competitive_risk",
+      "recency_days",
+      "frequency",
+      "monetary",
+      "updated_at",
+      "journey_stage",
+      "favorite_category",
+      "favorite_product",
+      "last_interaction"
+    ],
+    "column_count": 20,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "support_tickets": {
+    "row_count": 1,
+    "columns": [
+      "ticket_id",
+      "customer_id",
+      "subject",
+      "message",
+      "sentiment",
+      "sentiment_score",
+      "status",
+      "priority",
+      "created_at",
+      "resolved_at"
+    ],
+    "column_count": 10,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "messages": {
+    "row_count": 0,
+    "columns": [
+      "message_id",
+      "customer_id",
+      "channel",
+      "subject",
+      "content",
+      "tone",
+      "opened",
+      "clicked",
+      "campaign_id",
+      "timestamp"
+    ],
+    "column_count": 10,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']",
+      "['campaign_id'] -> campaigns.['campaign_id']"
+    ]
+  },
+  "journeys": {
+    "row_count": 0,
+    "columns": [
+      "journey_id",
+      "customer_id",
+      "journey_type",
+      "journey_stage",
+      "journey_status",
+      "steps",
+      "current_step",
+      "created_at",
+      "updated_at",
+      "completed_at"
+    ],
+    "column_count": 10,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  },
+  "nba_decisions": {
+    "row_count": 0,
+    "columns": [
+      "decision_id",
+      "customer_id",
+      "recommended_action",
+      "channel",
+      "offer",
+      "tone",
+      "timing",
+      "message",
+      "confidence",
+      "reason",
+      "inference_tier",
+      "signals_used",
+      "expected_outcome",
+      "status",
+      "timestamp"
+    ],
+    "column_count": 15,
+    "foreign_keys": [
+      "['customer_id'] -> customers.['customer_id']"
+    ]
+  }
+}

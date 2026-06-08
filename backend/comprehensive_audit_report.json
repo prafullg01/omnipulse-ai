@@ -1,0 +1,1329 @@
+{
+  "timestamp": "2026-06-04T22:29:53.975019",
+  "phases": {
+    "phase1_database_audit": {
+      "status": "COMPLETE",
+      "tables": {
+        "campaign_responses": {
+          "row_count": 682,
+          "columns": [
+            {
+              "name": "response_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "campaign_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "opened",
+              "type": "BOOLEAN",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "clicked",
+              "type": "BOOLEAN",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "converted",
+              "type": "BOOLEAN",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "revenue",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ],
+            [
+              1,
+              0,
+              "campaigns",
+              "campaign_id",
+              "campaign_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "campaigns": {
+          "row_count": 5,
+          "columns": [
+            {
+              "name": "campaign_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "campaign_name",
+              "type": "VARCHAR(255)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "audience",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "channel",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "offer",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "discount_pct",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "status",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "variant",
+              "type": "VARCHAR(10)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "budget",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "created_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "started_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "ended_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": []
+        },
+        "customer_profiles": {
+          "row_count": 5697,
+          "columns": [
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "risk_score",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "trust_score",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "happiness_score",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "clv",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "predicted_clv",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "churn_probability",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "persona",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "emotion",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "segment",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "engagement_score",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "competitive_risk",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "recency_days",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "frequency",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "monetary",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "updated_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "journey_stage",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "favorite_category",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "favorite_product",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "last_interaction",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "customer_name",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "age",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "gender",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "city",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "state",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "income",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "total_orders",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "total_revenue",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "average_order_value",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "nba_action",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "days_since_last_order",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "customers": {
+          "row_count": 5698,
+          "columns": [
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "first_name",
+              "type": "VARCHAR(100)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "last_name",
+              "type": "VARCHAR(100)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "email",
+              "type": "VARCHAR(255)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "password_hash",
+              "type": "VARCHAR(255)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "phone",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "gender",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "age",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "city",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "country",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "registration_date",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "preferred_language",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "status",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "role",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "avatar_url",
+              "type": "VARCHAR(500)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "created_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "updated_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": []
+        },
+        "digital_twin_results": {
+          "row_count": 12,
+          "columns": [
+            {
+              "name": "simulation_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "scenario",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "prediction",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "predicted_revenue",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "predicted_retention",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "predicted_churn",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "intervention_type",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "events": {
+          "row_count": 28815,
+          "columns": [
+            {
+              "name": "event_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "event_type",
+              "type": "VARCHAR(50)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "event_value",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "metadata_json",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "executive_summaries": {
+          "row_count": 4,
+          "columns": [
+            {
+              "name": "summary_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "summary_text",
+              "type": "TEXT",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "metrics",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "highlights",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "risks",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "recommendations",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "generated_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": []
+        },
+        "journeys": {
+          "row_count": 380,
+          "columns": [
+            {
+              "name": "journey_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "journey_type",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "journey_stage",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "journey_status",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "steps",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "current_step",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "created_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "updated_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "completed_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "messages": {
+          "row_count": 0,
+          "columns": [
+            {
+              "name": "message_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "channel",
+              "type": "VARCHAR(30)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "subject",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "content",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "tone",
+              "type": "VARCHAR(30)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "opened",
+              "type": "BOOLEAN",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "clicked",
+              "type": "BOOLEAN",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "campaign_id",
+              "type": "VARCHAR",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "campaigns",
+              "campaign_id",
+              "campaign_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ],
+            [
+              1,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "nba_decisions": {
+          "row_count": 5757,
+          "columns": [
+            {
+              "name": "decision_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "recommended_action",
+              "type": "VARCHAR(255)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "channel",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "offer",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "tone",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timing",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "confidence",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "reason",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "inference_tier",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "signals_used",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "expected_outcome",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "status",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "timestamp",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "order_items": {
+          "row_count": 2536,
+          "columns": [
+            {
+              "name": "order_item_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "order_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "product_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "quantity",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "price",
+              "type": "FLOAT",
+              "notnull": 1,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "products",
+              "product_id",
+              "product_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ],
+            [
+              1,
+              0,
+              "orders",
+              "order_id",
+              "order_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "orders": {
+          "row_count": 2536,
+          "columns": [
+            {
+              "name": "order_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "total_amount",
+              "type": "FLOAT",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "status",
+              "type": "VARCHAR(30)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "payment_method",
+              "type": "VARCHAR(50)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "shipping_address",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "order_date",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "delivered_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        },
+        "products": {
+          "row_count": 3899,
+          "columns": [
+            {
+              "name": "product_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "name",
+              "type": "VARCHAR(255)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "category",
+              "type": "VARCHAR(100)",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "description",
+              "type": "TEXT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "price",
+              "type": "FLOAT",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "original_price",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "stock",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "rating",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "review_count",
+              "type": "INTEGER",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "image_url",
+              "type": "VARCHAR(500)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "brand",
+              "type": "VARCHAR(100)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "tags",
+              "type": "JSON",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "created_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": []
+        },
+        "support_tickets": {
+          "row_count": 1,
+          "columns": [
+            {
+              "name": "ticket_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 1
+            },
+            {
+              "name": "customer_id",
+              "type": "VARCHAR",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "subject",
+              "type": "VARCHAR(255)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "message",
+              "type": "TEXT",
+              "notnull": 1,
+              "pk": 0
+            },
+            {
+              "name": "sentiment",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "sentiment_score",
+              "type": "FLOAT",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "status",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "priority",
+              "type": "VARCHAR(20)",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "created_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            },
+            {
+              "name": "resolved_at",
+              "type": "DATETIME",
+              "notnull": 0,
+              "pk": 0
+            }
+          ],
+          "foreign_keys": [
+            [
+              0,
+              0,
+              "customers",
+              "customer_id",
+              "customer_id",
+              "NO ACTION",
+              "NO ACTION",
+              "NONE"
+            ]
+          ]
+        }
+      },
+      "total_tables": 14
+    },
+    "phase2_data_quality": {
+      "status": "COMPLETE",
+      "corrupted_customers": 0,
+      "corrupted_products": 0,
+      "issues": []
+    },
+    "phase3_customer360": {
+      "status": "PASS",
+      "total_profiles": 5697,
+      "missing_clv_pct": 63.9,
+      "missing_trust": 0,
+      "missing_churn": 0
+    },
+    "phase4_emotion": {
+      "status": "PASS",
+      "distribution": {
+        "excited": 33,
+        "frustrated": 455,
+        "happy": 1037,
+        "neutral": 4172
+      }
+    },
+    "phase5_churn": {
+      "status": "PASS",
+      "distribution": {
+        "critical": 653,
+        "high": 1228,
+        "medium": 1424,
+        "low": 2392
+      },
+      "duplicates": 0
+    },
+    "phase6_trust": {
+      "status": "PASS",
+      "avg_trust": 86.8,
+      "distribution": {
+        "high": 3969,
+        "medium": 1226,
+        "low": 502
+      },
+      "return_rate": 20.4
+    },
+    "phase7_nba": {
+      "status": "PASS",
+      "total_decisions": 5757,
+      "max_per_customer": 4,
+      "action_distribution": {
+        "churn_rescue": 693,
+        "cross_sell": 3689,
+        "loyalty_reward": 105,
+        "premium_upgrade": 127,
+        "re_engagement": 1143
+      },
+      "channel_distribution": {
+        "Call": 251,
+        "Email": 1497,
+        "Push": 1280,
+        "SMS": 1288,
+        "WhatsApp": 1381,
+        "email": 40,
+        "push": 20
+      },
+      "confidence_diversity": 100,
+      "max_action_pct": 64.1
+    },
+    "phase8_journey": {
+      "status": "PASS",
+      "top_customer_events": {
+        "CUST-8B9E9885": 115,
+        "CUST-8378C892": 97,
+        "CUST-48C5825A": 95,
+        "CUST-62E00FA7": 90,
+        "CUST-1C78AC47": 89
+      },
+      "event_types": {
+        "product_view": 10747,
+        "review_submitted": 5000,
+        "cart_add": 1628,
+        "search": 1344,
+        "purchase": 1336,
+        "campaign_received": 1208,
+        "campaign_opened": 1045,
+        "offer_clicked": 970,
+        "wishlist_add": 947,
+        "review_submit": 827,
+        "cart_remove": 817,
+        "checkout": 673,
+        "support_chat": 632,
+        "complaint": 629,
+        "refund_request": 517,
+        "assistant_interaction": 494,
+        "ticket_created": 1
+      }
+    },
+    "phase9_campaigns": {
+      "status": "PASS",
+      "total_campaigns": 5,
+      "campaign_status": {
+        "active": 5
+      },
+      "total_responses": 682
+    },
+    "phase10_roi": {
+      "status": "PASS",
+      "total_revenue": 4198780.71,
+      "campaign_revenue": 7130.37,
+      "revenue_at_risk": 0
+    },
+    "phase13_consistency": {
+      "status": "PASS",
+      "customer_counts": {
+        "customers": 5697,
+        "profiles": 5697,
+        "orders_unique": 2057
+      }
+    }
+  },
+  "summary": {
+    "passed": 9,
+    "failed": 0,
+    "warnings": 0,
+    "total_phases": 11
+  }
+}

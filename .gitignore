@@ -1,0 +1,35 @@
+# Dependencies
+node_modules/
+/dist
+/build
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+
+# Python
+venv/
+.venv/
+__pycache__/
+*.py[cod]
+*$py.class
+
+# Database
+omnipulse.db
+omnipulse.db-journal
+omnipulse.db-shm
+omnipulse.db-wal
+
+# IDEs
+.vscode/
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw?
+
+# System Files
+.DS_Store
+Thumbs.db

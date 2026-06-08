@@ -1,0 +1,166 @@
+{
+  "timestamp": "2026-06-04T19:17:20.780704",
+  "phases": {
+    "phase1_database": {
+      "customers": {
+        "row_count": 5698,
+        "columns": 17,
+        "null_counts": {
+          "phone": 698,
+          "gender": 1,
+          "age": 1,
+          "avatar_url": 5698
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "customer_profiles": {
+        "row_count": 5697,
+        "columns": 31,
+        "null_counts": {},
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "orders": {
+        "row_count": 2536,
+        "columns": 8,
+        "null_counts": {
+          "shipping_address": 2536,
+          "delivered_at": 2536
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "events": {
+        "row_count": 28815,
+        "columns": 6,
+        "null_counts": {},
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "nba_decisions": {
+        "row_count": 5757,
+        "columns": 15,
+        "null_counts": {
+          "message": 5697,
+          "reason": 5697,
+          "signals_used": 5697,
+          "expected_outcome": 5697,
+          "status": 5697
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "campaigns": {
+        "row_count": 5,
+        "columns": 13,
+        "null_counts": {
+          "ended_at": 5
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "campaign_responses": {
+        "row_count": 682,
+        "columns": 8,
+        "null_counts": {},
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "support_tickets": {
+        "row_count": 1,
+        "columns": 10,
+        "null_counts": {
+          "resolved_at": 1
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      },
+      "products": {
+        "row_count": 3899,
+        "columns": 13,
+        "null_counts": {
+          "original_price": 3899,
+          "image_url": 3899
+        },
+        "duplicates": 0,
+        "corrupted": 0
+      }
+    },
+    "phase3_fairness": {
+      "overall_fairness": 87.85,
+      "gender_fairness": 99.5,
+      "age_fairness": 94.9,
+      "action_fairness": 66.8,
+      "channel_fairness": 90.2,
+      "coverage_score": 100.0,
+      "equity_index": 0.9949947866487875,
+      "data_source": "5757 NBA decisions"
+    },
+    "phase4_roi": {
+      "total_revenue": 4198780.71,
+      "campaign_revenue": 469083.96,
+      "match_rate": 34.90853658536585,
+      "attribution_method": "AI_ESTIMATED",
+      "confidence": 34.90853658536585
+    },
+    "phase5_nba": {
+      "confidence_range": 0.1799857133124103,
+      "action_distribution": {
+        "churn_rescue": 693,
+        "cross_sell": 3689,
+        "loyalty_reward": 105,
+        "premium_upgrade": 127,
+        "re_engagement": 1143
+      },
+      "duplicate_recs": 18
+    },
+    "phase6_trust": {
+      "avg_trust": 86.78185185268259,
+      "drivers": {
+        "purchase_history": 36.10672283658066,
+        "payment_reliability": 100.0,
+        "return_rate": 20.386435331230285
+      }
+    },
+    "phase7_churn": {
+      "critical": 653,
+      "high": 1228,
+      "low": 2392,
+      "medium": 1424
+    },
+    "phase8_revenue_at_risk": {
+      "high_risk_count": 1881,
+      "clv_based": 0,
+      "historical_based": 0,
+      "potential_based": 1856006.7728351734,
+      "total": 1856006.7728351734,
+      "method_used": "historical + potential"
+    }
+  },
+  "issues": [],
+  "warnings": [
+    "Campaign attribution only 34.9% direct match rate",
+    "ROI attribution uses AI estimation due to low ID match rate",
+    "18 duplicate NBA recommendations",
+    "CLV is zero for all customers, using alternative calculation"
+  ],
+  "passed": [
+    "customers exists with 5,698 rows",
+    "customer_profiles exists with 5,697 rows",
+    "orders exists with 2,536 rows",
+    "events exists with 28,815 rows",
+    "nba_decisions exists with 5,757 rows",
+    "campaigns exists with 5 rows",
+    "campaign_responses exists with 682 rows",
+    "support_tickets exists with 1 rows",
+    "products exists with 3,899 rows",
+    "City data clean",
+    "Fairness Observatory validated: 87.8/100",
+    "NBA confidence is dynamic",
+    "Trust Center validated with database calculations",
+    "Churn Center distribution validated",
+    "Revenue At Risk calculated: \u20b91,856,006.77"
+  ],
+  "failed": []
+}
