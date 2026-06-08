@@ -33,3 +33,8 @@ omnipulse.db-wal
 # System Files
 .DS_Store
 Thumbs.db
+
+# Extracted dataset files
+backend/datasets/extracted_archive/
+backend/datasets/extracted_archive*/
+
